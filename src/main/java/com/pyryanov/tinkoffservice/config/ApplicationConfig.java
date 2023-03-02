@@ -13,7 +13,9 @@ public class ApplicationConfig {
 
     @Bean
     public OpenApi api() {
-        String ssoToken = System.getenv("ssoToken");
-        return new OkHttpOpenApi(ssoToken, apiConfig.getIsSandBoxMode());
+        //добавление токена с помощью Environment variables:
+//        String ssoToken = System.getenv("ssoToken");
+//        return new OkHttpOpenApi(ssoToken, apiConfig.getIsSandBoxMode());
+        return new OkHttpOpenApi(apiConfig.getToken(), apiConfig.getIsSandBoxMode());
     }
 }

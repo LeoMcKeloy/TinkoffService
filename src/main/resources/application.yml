@@ -3,3 +3,4 @@ server:
 
 api:
   isSandBoxMode: true
+  token: <место для токена>
